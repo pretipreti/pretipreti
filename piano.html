@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <style>
+          *{
+              margin:0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+          body{
+              background-image: url(music.jpg);
+              height:100vh;
+              width:100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .board{
+              display: flex;
+          }
+          .white{
+              position: relative;
+              width: 100px;
+              height:400px;
+              background-color: whitesmoke;
+              margin-left: 5px;
+              border-radius: 10px;
+              box-shadow: -3px -3px 6px grey, 3px 3px 5px lightgoldenrodyellow;
+          }
+          .white h1{
+              position: absolute;
+              left: 50%;
+              bottom: 10%;
+              transform: translate(-50%, -10%);
+              user-select: none;
+          }
+          .white:active{
+               box-shadow: -3px -3px 6px blanchedalmond, 3px 3px 0px grey;
+          }
+          .white:hover{
+              background-color:violet;
+
+          }
+         .black{
+              width:60px;
+              height:200px;
+              background-color: black;
+              margin: 0 -30px;
+              z-index: 1;
+              border-radius: 10px;
+              box-shadow: -3px -3px 6px grey, 3px 3px 5px lightgoldenrodyellow;
+
+          }
+          .black:active{
+             box-shadow: -3px -3px 6px blanchedalmond, 3px 3px 0px grey;
+          }
+          .black:hover{
+              background-color: darkgoldenrod;
+          }
+          .maindiv p{
+    
+              color:black;
+              font-size: 90px;
+              font-style: italic;
+              align-items: center;
+              text-shadow: -3px -3px 5px black, 3px 3px 6px whitesmoke;
+          }
+
+    </style>
+</head>
+<body>
+    <div align="center" class="maindiv"><p>THE REALISTIC VIRTUAL PIANO</p></div>
+    <br><br>
+    <div class="board">
+        <div data-key="A" class="white btn">
+            <h1>A</h1>
+        </div>
+        <div data-key="Ab" class="black btn"></div>
+        <div data-keys="B" class="white btn">
+            <h1>B</h1>
+        </div>
+        <div data-key="Bb" class="black btn"></div>
+        <div data-key="C" class="white btn">
+            <h1>C</h1>
+        </div>
+        <div data-key="D" class="white btn">
+            <h1>D</h1>
+        </div>
+        <div data-key="Db" class="black btn"></div>
+        <div data-key="E" class="white btn">
+            <h1>E</h1>
+        </div>
+        <div data-key="Eb" class="black btn"></div>
+        <div data-key="F" class="white btn">
+            <h1>F</h1>
+        </div>
+        <div data-key="G" class="white btn">
+            <h1>G</h1>
+        </div>
+        <div data-key="Gb" class="black btn"></div>
+        <div data-key="Gb" class="white btn">
+            <h1>Gb</h1>
+        </div>
+    </div>
+    <audio src="A.mp3.aac" id="A"></audio>
+    <audio src="Ab.mp3.aac" id="Ab"></audio>
+    <audio src="B.mp3.aac" id="B"></audio>
+    <audio src="Bb.mp3.aac" id="Bb"></audio>
+    <audio src="C.mp3.aac" id="C"></audio>
+    <audio src="D.mp3.aac" id="D"></audio>
+    <audio src="Db.mp3.aac" id="Db"></audio>
+    <audio src="E.mp3.aac" id="E"></audio>
+    <audio src="Eb.mp3.aac" id="Eb"></audio>
+    <audio src="F.mp3.aac" id="F"></audio>
+    <audio src="G.mp3.aac" id="G"></audio>
+    <audio src="Gb.mp3.aac" id="Gb"></audio>
+    <script>
+        const btns = document.querySelectorAll(".btn");
+
+        btns.forEach(btn => {
+            btn.addEventListener("click", () => playSound(btn));
+        });
+
+        function playSound(btn) {
+            const sound = document.getElementById(btn.dataset.key);
+            sound.currentTime = 0;
+            sound.play();
+        }
+        
+        
+    </script>
+</body>
+</html>
