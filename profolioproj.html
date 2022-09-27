@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            
+        }
+        .maindiv{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar i{
+            cursor:pointer;
+        }
+        .navbar ul li{
+            display: inline-block;
+            margin: 0 20px;
+        }
+        .navbar ul li a{
+            color:white;
+
+        }
+        .secondiv{
+            width:100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color:thistle;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .thirdiv{
+            text-align: center;
+            color:whitesmoke;
+            font-style: italic;
+            transform: translateY(-50%);
+            width:100%;
+            bottom: 0%;
+            position: absolute;
+        }
+        .secondiv button{
+            width: 200px;
+            padding: 15px 0;
+            border-radius: 25px;
+            border: 2px solid whitesmoke;
+            text-align: center;
+            font-weight: bold;
+            background: transparent;
+            cursor:pointer;
+            margin: 20px 10px;
+            color:yellowgreen;
+         }
+         
+
+         
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="navbar">
+            <i class="fas fa-home fa-4x"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bedroom</a></li>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">Kitchen</a></li>
+                <li><a href="#">Backyard</a></li>
+            </ul>
+
+        </div>
+        <div class="secondiv">
+            <h1>DESIGN YOUR HOUSE</h1><br>
+            <P>Here we are providing interior house design with low prices.<br>Contact us to get a pretty looking designs in your house.</P>
+         <div><br>
+             <button type="button">CONTACT US</button>
+         </div>
+        </div>
+        <div class="thirdiv">
+            <h2><marquee direction=right width=30%>Thank you & visit again</marquee></h2>
+        </div>
+
+    </div>
+</body>
+</html>
